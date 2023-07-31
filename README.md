@@ -26,7 +26,6 @@ Built using @json-schema-tools/traverse
   - http/https uris
   - local filesystem references
 - configurable
- - optionally de-reference internal references only, keeping it synchronous
  - ignore refs that match a set of patterns
 - extensible
   - dependency injectable fetch and filesystem
@@ -63,7 +62,6 @@ const mySchema = {
 
 const dereferencer = new JsonSchemaDereferencer(mySchema);
 
-console.log(dereferencer.resolveSync());
 console.log(await dereferencer.resolve());
 ```
 
